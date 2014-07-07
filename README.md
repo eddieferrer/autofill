@@ -1,6 +1,10 @@
 Form auto-completion tool
 ========
 
+This is a fork of: https://github.com/dsheiko/autofill
+
+This fork combines the autofill with random user information from the RandomUser.me API http://randomuser.me/
+
 Demo: http://demo.dsheiko.com/autofill/
 
 When testing a web-site, nevermind who you are developer or QA-engineer, it happens to you pretty often to fill-in form fields again and again. Boring, stupid work, but how to make sure the form does still work as intended? Some fields added, CAPTCHA was attached, whatever else done –you have to run the test again. Besides, it will be repeated on different browsers. Browser form auto-completion feature helps a bit, but that is not the same as when you have various sets of test-data always ready to apply on a form, isn’t it?
@@ -58,6 +62,3 @@ You can run this code on a page with form by using Scratchpad (Firefox Shift-F4)
 You can also create a bookmaklet out of it. Create an HTML file and put there the link:
 
     <a href="javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='http://demo.dsheiko.com/autofill/src/autofill.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();">AutoFill</a>
-
-
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/a4a969331cc66c6583eb245aa3e24186 "githalytics.com")](http://githalytics.com/dsheiko/autofill)
