@@ -1,4 +1,4 @@
-Form auto-completion tool
+Random User Form Auto-completion Tool
 ========
 
 This is a fork of: https://github.com/dsheiko/autofill 
@@ -8,7 +8,7 @@ Demo: http://demo.dsheiko.com/autofill/
 This fork combines the autofill with random user information from the RandomUser.me API http://randomuser.me/
 Demo: https://rawgit.com/eddieferrer/autofill/master/index.html
 
-This is a real simple way to fill out a form with random user data using a bookmarklet. Helpful for testing internal forms or filling out forms with junk information. 
+This is a real simple way to fill out a form with random user data using a bookmarklet. Helpful for testing forms or filling out forms with junk information. 
 
 ```
 (function( window ) {

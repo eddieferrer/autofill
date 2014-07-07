@@ -1,122 +1,156 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Form auto-completion tool</title>
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="./assets/demo.css" />
-    <link rel="publisher" href="https://plus.google.com/113857365337532405020" />
-    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,700' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="./favicon.ico" />
-    <link rel="icon" href="./favicon.ico" type="image/ico" />
-    <link rel="demo" href="http://demo.dsheiko.com/sharebar" title="Form auto-completion tool" />
-    <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,700' rel='stylesheet' type='text/css'>
+        <title>Random User Form Auto-completion Tool</title>
 
- <!------ Check if browser isn't too old  -->
- <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+        <!-- Bootstrap core CSS -->
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 
- <!------ Check if JavaScript is enabled  -->
- <p id="js-disabled" class="chromeframe"><strong>JavaScript is disabled!</strong> To display this content, you need a JavaScript capable browser.</p>
- <script>
-    (function( window ){
-      var el = window.document.getElementById( "js-disabled" );
-      el.parentNode.removeChild( el );
-    }( window ))
- </script>
+        <!-- Custom styles for this template -->
+        <link href="assets/demo.css" rel="stylesheet">
 
-    <header role="banner">
-        <div>
-            <hgroup>
-                <h1>Form auto-completion tool</h1>
-            </hgroup>
-            <a class="fork" href="https://github.com/dsheiko/autofill.git">Fork Me on GitHub</a>
-        </div>
-    </header>
-    <section role="main">
-        <div>
-            <aside>
-                Drag this to Bookmarks Bar
-<a href="javascript: var title=window.location.href;if (title.indexOf('http://demo.dsheiko.com/autofill')=== 0){'<head><link rel=\'shortcut icon\' href=\'http://demo.dsheiko.com/autofill/favicon.ico\'></head>Bookmarklet';}else{(function(){s=document.createElement('script');s.type='text/javascript';s.src='http://demo.dsheiko.com/autofill/src/autofill.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);void(0);})();}">AutoFill</a>
-            </aside>
-            <article>
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
 
-                <p>When testing a web-site, nevermind who you are developer or QA-engineer, it happens to you pretty often to fill-in form fields again and again. Boring, stupid work, but how to make sure the form does still work as intended? Some fields added, CAPTCHA was attached, whatever else done –you have to run the test again. Besides, it will be repeated on different browsers. Browser form auto-completion feature helps a bit, but that is not the same as when you have various sets of test-data always ready to apply on a form, isn’t it?</p>
+    <body>
+        <div class="container">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li class="active"><a class="fork" href="https://github.com/eddieferrer/autofill.git">Fork Me on GitHub</a></li>
+                </ul>
+                <h3 class="text-muted">Random User Form Auto-completion Tool</h3>
+            </div>
 
-<p>Well, what I propose is a very simple tool which you can use anywhere for form testing. You need to take this JS code and fill it once with your own test data:</p>
+            <div class="jumbotron">
+                <h1>Random User Autofill</h1>
+                <p class="lead">Drag this button onto your bookmarks bar.</p>
+                <p><a class="btn btn-lg btn-success" href="javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='https://cdn.rawgit.com/eddieferrer/autofill/master/src/randomUserAutoFill.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();" role="button">Autofill</a></p>
+            </div>
 
-            <textarea class="code" rows="35">
+            <div class="row marketing">
+                <div class="col-lg-12">
+                    <h4>What is it?</h4>
+                    <p>This is a real simple way to fill out a form with random user data using a bookmarklet. Helpful for testing forms or filling out forms with junk information.</p>
+                    <h4>Demo Form</h4>
+                    <p>
+                        <label for="title"       >title         </label>  <input name="title"           type="text"/><div class="clearfix"></div>
+                        <label for="fullname"    >fullname      </label>  <input name="fullname"        type="text"/><div class="clearfix"></div>
+                        <label for="firstname"   >firstname     </label>  <input name="firstname"       type="text"/><div class="clearfix"></div>
+                        <label for="lastname"    >lastname      </label>  <input name="lastname"        type="text"/><div class="clearfix"></div>
+                        <label for="email"       >email         </label>  <input name="email"           type="text"/><div class="clearfix"></div>
+                        <label for="username"    >username      </label>  <input name="username"        type="text"/><div class="clearfix"></div>
+                        <label for="password"    >password      </label>  <input name="password"        type="text"/><div class="clearfix"></div>
+                        <label for="confirmation">confirmation  </label>  <input name="confirmation"    type="text"/><div class="clearfix"></div>
+                        <label for="zipcode"     >zipcode       </label>  <input name="zipcode"         type="text"/><div class="clearfix"></div>
+                        <label for="country"     >country       </label>  <input name="country"         type="text"/><div class="clearfix"></div>
+                        <label for="state"       >state         </label>  <input name="state"           type="text"/><div class="clearfix"></div>
+                        <label for="city"        >city          </label>  <input name="city"            type="text"/><div class="clearfix"></div>
+                        <label for="address"     >address       </label>  <input name="address"         type="text"/><div class="clearfix"></div>
+                        <label for="phone"       >phone         </label>  <input name="phone"           type="text"/><div class="clearfix"></div>
+                        <label for="cell"        >cell          </label>  <input name="cell"            type="text"/><div class="clearfix"></div>
+                        <label for="SSN"         >SSN           </label>  <input name="SSN"             type="text"/><div class="clearfix"></div>
+                    </p>                    
+                </div>
+            </div>
 
-(function( window ) {
-    var document = window.document,
-        fieldValueMap = {
-              'title' : 'Ms.'
-            , 'name' : 'JonSnow'
-            , 'fillname' : 'Jon Snow'
-            , 'firstname' : 'Jon'
-            , 'lastname'  : 'Snow'
-            , 'email'     : 'jon.snow@winterfell.we'
-            , 'username' : 'Stark'
-            , 'password' : 'wintercomes'
-            , 'confirmation' : 'wintercomes'
-            , 'position' : 'Lord Commander'
-            , 'zipcode' : 'wintercomes'
-            , 'country' : 'Westeros'
-            , 'city' : 'The Wall'
-            , 'company' : 'Night Watch'
-            , 'address' : 'The Black Tower'
-            , 'phone' : 777777
-            , 'nationality' : 'Westerosi'
-            , 'comment' : 'This is a test data. Please, ignore it.'
-            , 'jobtitle' : 'Crow'
-            , 'experiance' : 'Veteran (5+)'
-            , 'site_link' : 'jon.winterfell.we'
-            , 'how' : 'other (Please specify)'
-            , 'specified' : 'This is a test data. Please, ignore it.'
-        };
+            <textarea class="form-control" rows="80">
+                (function( window ) {
+                    "use strict";
+                    var data;
 
-    Object.keys( fieldValueMap ).forEach(function( name ){
-        var input = document.querySelector( "form input[name=" + name + "]" )
-            || document.querySelector( "form textarea[name=" + name + "]" );
-        input && ( input.value = fieldValueMap[ name ] );
-    });
+                    var document = window.document;
+                    //Default values in case API call fails. 
+                    var fieldValueMap = {
+                        "title"       : "Ms.", 
+                        "fullname"    : "Jon Snow", 
+                        "firstname"   : "Jon", 
+                        "lastname"    : "Snow", 
+                        "email"       : "jon.snow@winterfell.we",
+                        "username"    : "Stark",
+                        "password"    : "wintercomes",
+                        "confirmation": "wintercomes",
+                        "zipcode"     : "69523", 
+                        "country"     : "United States", 
+                        "state"       : "North Dakota", 
+                        "city"        : "Wichita", 
+                        "address"     : "3153 auburn ave", 
+                        "phone"       : "(327)-710-3077", 
+                        "cell"        : "(327)-710-3077", 
+                        "SSN"         : "966-49-5276"
+                    };
 
-})( window );
+                    var xmlhttp;
+                    if (window.XMLHttpRequest) {
+                        // code for IE7+, Firefox, Chrome, Opera, Safari
+                        xmlhttp = new XMLHttpRequest();
+                    } else {
+                        // code for IE6, IE5
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
 
+                    xmlhttp.onload = function() {
+                        if (xmlhttp.readyState == 4 ) {
+                            if(xmlhttp.status == 200){
+                                data = JSON.parse(xmlhttp.responseText);
+                                fieldValueMap.title =  data.results[0].user.name.title;
+                                fieldValueMap.fullname = data.results[0].user.name.first + " " + data.results[0].user.name.last;
+                                fieldValueMap.firstname = data.results[0].user.name.first;
+                                fieldValueMap.lastname = data.results[0].user.name.last;
+                                fieldValueMap.email = data.results[0].user.email;
+                                fieldValueMap.username = data.results[0].user.username;
+                                fieldValueMap.password = data.results[0].user.password;
+                                fieldValueMap.confirmation = data.results[0].user.password;
+                                fieldValueMap.zipcode = data.results[0].user.location.zip;
+                                fieldValueMap.state = data.results[0].user.location.state;
+                                fieldValueMap.city = data.results[0].user.location.city;
+                                fieldValueMap.address = data.results[0].user.location.address;
+                                fieldValueMap.phone = data.results[0].user.phone;
+                                fieldValueMap.cell = data.results[0].user.cell;
+                                fieldValueMap.SSN = data.results[0].user.SSN;
+                                populateForm();
+                            }
+                            else if(xmlhttp.status == 400) {
+                                alert('There was an error 400')
+                            }
+                            else {
+                                alert('something else other than 200 was returned')
+                            }
+                        }
+                    }
+                    
+                    xmlhttp.open("GET", 'http://api.randomuser.me/', true);
+                    xmlhttp.send();
+
+                    function populateForm() {
+                        Object.keys( fieldValueMap ).forEach(function( name ){
+                            var input = document.querySelector( "form input[name='" + name + "']" ) || document.querySelector( "form select[name='" + name + "']" ) || document.querySelector( "form textarea[name='" + name + "']" );
+                            input && input.type !== "hidden" && ( input.value = fieldValueMap[ name ] );
+                        });        
+                    }
+
+                })( window );
             </textarea>
 
-            <p>Let’s make a bookmaklet out of it. Create an HTML file and put there the link:</p>
+            <a class="btn btn-inverse btn-large" href="https://github.com/eddieferrer/autofill.git">Download the latest version from GitHub</a>
+            <script type="text/javascript" src="/src/randomUserAutoFill.js"></script>
 
-            <textarea class="code" rows="3">
-<a href="javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='http://demo.dsheiko.com/autofill/src/autofill.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();">AutoFill</a>
-            </textarea>
-
-            </article>
-
-
-            <div class="download">
-                <a class="btn btn-inverse btn-large" href="https://github.com/dsheiko/autofill.git">Download the latest version from GitHub</a>
+            <div class="footer">
+                <small><em>randomUserAutoFill.js</em> is created by <a href="http://eferrer.info">Eddie Ferrer</a>.<br/>
+                It is based on <em>autofill.js</em> created by <a href="http://dsheiko.com">Dmitry Sheiko</a>.<br/>
+                It's released under the<a href="http://opensource.org/licenses/MIT"> MIT license</a>.<br/>
+                If you have any questions or feedback you can use the <a href="https://github.com/eddieferrer/autofill.git">github project page.</a></small>
             </div>
         </div>
-    </section>
-    <footer>
-        <article>
-            <p><var>autofill.js</var> is created by <a href="http://dsheiko.com">Dmitry Sheiko</a>.
-                It's released under the MIT license. </p>
-            <p>If you have any questions or feedback you can use the <a href="https://github.com/dsheiko/autofill.git">github project page.</a>
-            </p>
-        </article>
-    </footer>
-
-     <script type="text/javascript" src="./src/autofill.js"></script>
-
-</body>
+    </body>
 </html>
+<body>
