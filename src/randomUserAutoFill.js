@@ -1,16 +1,13 @@
-Form auto-completion tool
-========
+/* By: Eddie Ferrer
+*  @package Form auto-completion tool
+*  @copyright 2014 Eddie Ferrer (eferrer.info)
+*  @license MIT
 
-This is a fork of: https://github.com/dsheiko/autofill 
-Demo: http://demo.dsheiko.com/autofill/
-
-
-This fork combines the autofill with random user information from the RandomUser.me API http://randomuser.me/
-Demo: https://rawgit.com/eddieferrer/autofill/master/index.html
-
-This is a real simple way to fill out a form with random user data using a bookmarklet. Helpful for testing internal forms or filling out forms with junk information. 
-
-```
+*  Forked From: 
+*  @package Form auto-completion tool
+*  @copyright 2012 Dmitry Sheiko (http://dsheiko.com)
+*  @license MIT
+*/
 (function( window ) {
     "use strict";
     var data;
@@ -89,10 +86,3 @@ This is a real simple way to fill out a form with random user data using a bookm
     }
 
 })( window );
-```
-Best way to run this is to create a bookmarklet with the code: 
-
-    <a href="javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='https://cdn.rawgit.com/eddieferrer/autofill/master/src/randomUserAutoFill.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();">AutoFill</a>
-
-See demo for more info: 
-https://rawgit.com/eddieferrer/autofill/master/index.html
