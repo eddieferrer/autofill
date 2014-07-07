@@ -1,5 +1,5 @@
 Random User Form Auto-completion Tool
-========
+-------------------------------------
 
 This is a fork of: https://github.com/dsheiko/autofill 
 Demo: http://demo.dsheiko.com/autofill/
