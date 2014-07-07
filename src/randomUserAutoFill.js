@@ -1,6 +1,6 @@
 /* By: Eddie Ferrer
-*  @package Form auto-completion tool
-*  @copyright 2014 Eddie Ferrer (eferrer.info)
+*  @package Random User Form auto-completion tool
+*  @copyright 2014 Eddie Ferrer (http://eferrer.info)
 *  @license MIT
 
 *  Forked From: 
