@@ -34,7 +34,7 @@
             <div class="jumbotron">
                 <h1>Random User Autofill</h1>
                 <p class="lead">Drag this button onto your bookmarks bar.</p>
-                <p><a class="btn btn-lg btn-success" href="javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='https://cdn.rawgit.com/eddieferrer/autofill/master/src/randomUserAutoFill.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();" role="button">Autofill</a></p>
+                <p><a class="btn btn-lg btn-success"  href="javascript: var title=window.location.href;(function(){s=document.createElement('script');s.type='text/javascript';s.src='http://cdn.rawgit.com/eddieferrer/autofill/master/src/randomUserAutoFill.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);void(0);})();">AutoFill</a></p>
             </div>
 
             <div class="row marketing">
@@ -42,24 +42,72 @@
                     <h4>What is it?</h4>
                     <p>This is a real simple way to fill out a form with random user data using a bookmarklet. Helpful for testing forms or filling out forms with junk information.</p>
                     <h4>Demo Form</h4>
-                    <p>
-                        <label for="title"       >title         </label>  <input name="title"           type="text"/><div class="clearfix"></div>
-                        <label for="fullname"    >fullname      </label>  <input name="fullname"        type="text"/><div class="clearfix"></div>
-                        <label for="firstname"   >firstname     </label>  <input name="firstname"       type="text"/><div class="clearfix"></div>
-                        <label for="lastname"    >lastname      </label>  <input name="lastname"        type="text"/><div class="clearfix"></div>
-                        <label for="email"       >email         </label>  <input name="email"           type="text"/><div class="clearfix"></div>
-                        <label for="username"    >username      </label>  <input name="username"        type="text"/><div class="clearfix"></div>
-                        <label for="password"    >password      </label>  <input name="password"        type="text"/><div class="clearfix"></div>
-                        <label for="confirmation">confirmation  </label>  <input name="confirmation"    type="text"/><div class="clearfix"></div>
-                        <label for="zipcode"     >zipcode       </label>  <input name="zipcode"         type="text"/><div class="clearfix"></div>
-                        <label for="country"     >country       </label>  <input name="country"         type="text"/><div class="clearfix"></div>
-                        <label for="state"       >state         </label>  <input name="state"           type="text"/><div class="clearfix"></div>
-                        <label for="city"        >city          </label>  <input name="city"            type="text"/><div class="clearfix"></div>
-                        <label for="address"     >address       </label>  <input name="address"         type="text"/><div class="clearfix"></div>
-                        <label for="phone"       >phone         </label>  <input name="phone"           type="text"/><div class="clearfix"></div>
-                        <label for="cell"        >cell          </label>  <input name="cell"            type="text"/><div class="clearfix"></div>
-                        <label for="SSN"         >SSN           </label>  <input name="SSN"             type="text"/><div class="clearfix"></div>
-                    </p>                    
+                    <form role="form" class="form-inline">
+                        <div class="form-group">
+                            <label for="title">title</label>  
+                            <input name="title"           type="text"  class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">fullname</label>  
+                            <input name="fullname" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstname">firstname</label>  
+                            <input name="firstname" type="text"  class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">lastname</label>  
+                            <input name="lastname" type="text"  class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">email</label>  
+                            <input name="email" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">username</label>  
+                            <input name="username" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">password</label>  
+                            <input name="password" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmation">confirmation </label>  
+                            <input name="confirmation" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipcode" >zipcode</label>  
+                            <input name="zipcode" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="country" >country</label>  
+                            <input name="country" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">state</label>  
+                            <input name="state" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">city</label>  
+                            <input name="city" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">address</label>  
+                            <input name="address" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">phone</label>  
+                            <input name="phone" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="cell">cell</label>  
+                            <input name="cell" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="SSN">SSN</label>  
+                            <input name="SSN" type="text" class="form-control"/>
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -142,7 +190,7 @@
             </textarea>
 
             <a class="btn btn-inverse btn-large" href="https://github.com/eddieferrer/autofill.git">Download the latest version from GitHub</a>
-            <script type="text/javascript" src="/src/randomUserAutoFill.js"></script>
+            <script type="text/javascript" src="src/randomUserAutoFill.js"></script>
 
             <div class="footer">
                 <small><em>randomUserAutoFill.js</em> is created by <a href="http://eferrer.info">Eddie Ferrer</a>.<br/>
