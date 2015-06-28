@@ -40,71 +40,71 @@
             <div class="row marketing">
                 <div class="col-lg-12">
                     <h4>What is it?</h4>
-                    <p>This is a real simple way to fill out a form with random user data using a bookmarklet. Helpful for testing forms or filling out forms with junk information.</p>
+                    <p>A way to fill out form fields with generated user data. You can use this in a bookmarklet. Great for testing forms or for when you want to fill out forms with fake data. Uses the random user API to get random user data each time.</p>
                     <h4>Demo Form</h4>
                     <form role="form" class="form-inline">
                         <div class="form-group">
-                            <label for="title">title</label>  
+                            <label for="title">title</label>
                             <input name="title"           type="text"  class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="fullname">fullname</label>  
+                            <label for="fullname">fullname</label>
                             <input name="fullname" type="text" class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="firstname">firstname</label>  
+                            <label for="firstname">firstname</label>
                             <input name="firstname" type="text"  class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="lastname">lastname</label>  
+                            <label for="lastname">lastname</label>
                             <input name="lastname" type="text"  class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="email">email</label>  
+                            <label for="email">email</label>
                             <input name="email" type="text" class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="username">username</label>  
+                            <label for="username">username</label>
                             <input name="username" type="text" class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="password">password</label>  
+                            <label for="password">password</label>
                             <input name="password" type="text" class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="confirmation">confirmation </label>  
+                            <label for="confirmation">confirmation </label>
                             <input name="confirmation" type="text" class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="zipcode" >zipcode</label>  
+                            <label for="zipcode" >zipcode</label>
                             <input name="zipcode" type="text" class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="country" >country</label>  
+                            <label for="country" >country</label>
                             <input name="country" type="text" class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="state">state</label>  
+                            <label for="state">state</label>
                             <input name="state" type="text" class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="city">city</label>  
+                            <label for="city">city</label>
                             <input name="city" type="text" class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="address">address</label>  
+                            <label for="address">address</label>
                             <input name="address" type="text" class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="phone">phone</label>  
+                            <label for="phone">phone</label>
                             <input name="phone" type="text" class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="cell">cell</label>  
+                            <label for="cell">cell</label>
                             <input name="cell" type="text" class="form-control"/>
                         </div>
                         <div class="form-group">
-                            <label for="SSN">SSN</label>  
+                            <label for="SSN">SSN</label>
                             <input name="SSN" type="text" class="form-control"/>
                         </div>
                     </form>
@@ -117,23 +117,23 @@
                     var data;
 
                     var document = window.document;
-                    //Default values in case API call fails. 
+                    //Default values in case API call fails.
                     var fieldValueMap = {
-                        "title"       : "Ms.", 
-                        "fullname"    : "Jon Snow", 
-                        "firstname"   : "Jon", 
-                        "lastname"    : "Snow", 
+                        "title"       : "Ms.",
+                        "fullname"    : "Jon Snow",
+                        "firstname"   : "Jon",
+                        "lastname"    : "Snow",
                         "email"       : "jon.snow@winterfell.we",
                         "username"    : "Stark",
                         "password"    : "wintercomes",
                         "confirmation": "wintercomes",
-                        "zipcode"     : "69523", 
-                        "country"     : "United States", 
-                        "state"       : "North Dakota", 
-                        "city"        : "Wichita", 
-                        "address"     : "3153 auburn ave", 
-                        "phone"       : "(327)-710-3077", 
-                        "cell"        : "(327)-710-3077", 
+                        "zipcode"     : "69523",
+                        "country"     : "United States",
+                        "state"       : "North Dakota",
+                        "city"        : "Wichita",
+                        "address"     : "3153 auburn ave",
+                        "phone"       : "(327)-710-3077",
+                        "cell"        : "(327)-710-3077",
                         "SSN"         : "966-49-5276"
                     };
 
@@ -175,7 +175,7 @@
                             }
                         }
                     }
-                    
+
                     xmlhttp.open("GET", 'http://api.randomuser.me/', true);
                     xmlhttp.send();
 
@@ -183,7 +183,7 @@
                         Object.keys( fieldValueMap ).forEach(function( name ){
                             var input = document.querySelector( "form input[name='" + name + "']" ) || document.querySelector( "form select[name='" + name + "']" ) || document.querySelector( "form textarea[name='" + name + "']" );
                             input && input.type !== "hidden" && ( input.value = fieldValueMap[ name ] );
-                        });        
+                        });
                     }
 
                 })( window );

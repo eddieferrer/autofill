@@ -1,7 +1,7 @@
 Random User Form Auto-Fill Tool
 -------------------------------------
 
-This is a fork of: https://github.com/dsheiko/autofill 
+This is a fork of: https://github.com/dsheiko/autofill
 Demo: http://demo.dsheiko.com/autofill/
 
 
@@ -9,7 +9,7 @@ This fork combines the autofill with random user information from the RandomUser
 
 #### Demo: http://rawgit.com/eddieferrer/autofill/master/index.html ####
 
-This is a real simple way to fill out a form with random user data using a bookmarklet. Helpful for testing forms or filling out forms with junk information. 
+This is a real simple way to fill out a form with random user data using a bookmarklet. Helpful for testing forms or filling out forms with junk information.
 
 ```
 (function( window ) {
@@ -17,23 +17,23 @@ This is a real simple way to fill out a form with random user data using a bookm
     var data;
 
     var document = window.document;
-    //Default values in case API call fails. 
+    //Default values in case API call fails.
     var fieldValueMap = {
-        "title"       : "Ms.", 
-        "fullname"    : "Jon Snow", 
-        "firstname"   : "Jon", 
-        "lastname"    : "Snow", 
+        "title"       : "Ms.",
+        "fullname"    : "Jon Snow",
+        "firstname"   : "Jon",
+        "lastname"    : "Snow",
         "email"       : "jon.snow@winterfell.we",
         "username"    : "Stark",
         "password"    : "wintercomes",
         "confirmation": "wintercomes",
-        "zipcode"     : "69523", 
-        "country"     : "United States", 
-        "state"       : "North Dakota", 
-        "city"        : "Wichita", 
-        "address"     : "3153 auburn ave", 
-        "phone"       : "(327)-710-3077", 
-        "cell"        : "(327)-710-3077", 
+        "zipcode"     : "69523",
+        "country"     : "United States",
+        "state"       : "North Dakota",
+        "city"        : "Wichita",
+        "address"     : "3153 auburn ave",
+        "phone"       : "(327)-710-3077",
+        "cell"        : "(327)-710-3077",
         "SSN"         : "966-49-5276"
     };
 
@@ -75,7 +75,7 @@ This is a real simple way to fill out a form with random user data using a bookm
             }
         }
     }
-    
+
     xmlhttp.open("GET", 'http://api.randomuser.me/', true);
     xmlhttp.send();
 
@@ -86,7 +86,7 @@ This is a real simple way to fill out a form with random user data using a bookm
                 || document.querySelector( "form textarea[name='" + name + "']" );
 
             input && input.type !== "hidden" && ( input.value = fieldValueMap[ name ] );
-        });        
+        });
     }
 
 })( window );
@@ -95,5 +95,5 @@ Best way to run this is to create a bookmarklet with the code:
 
     <a href="javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='https://cdn.rawgit.com/eddieferrer/autofill/master/src/randomUserAutoFill.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();">AutoFill</a>
 
-See demo for more info: 
-https://rawgit.com/eddieferrer/autofill/master/index.html
+See demo for more info:
+http://rawgit.com/eddieferrer/autofill/master/index.html
